@@ -1,0 +1,177 @@
+{
+  "accessors": [
+    {
+      "bufferView": 0,
+      "componentType": 5126,
+      "count": 299988,
+      "max": [
+        1.46302700042725,
+        1.13031506538391,
+        -3.02777099609375
+      ],
+      "min": [
+        -2.14190697669983,
+        -1.30998504161835,
+        -5.82558298110962
+      ],
+      "normalized": false,
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 299988,
+      "max": [
+        0.99947726726532,
+        0.999997675418854,
+        0.9999920129776
+      ],
+      "min": [
+        -0.999989092350006,
+        -0.99985545873642,
+        -0.999264001846313
+      ],
+      "normalized": false,
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 299988,
+      "max": [
+        0.995124995708466,
+        0.999695003032684
+      ],
+      "min": [
+        0.00031699999817647,
+        0.000405013561248779
+      ],
+      "normalized": false,
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5125,
+      "count": 299988,
+      "max": [
+        65535.0
+      ],
+      "min": [
+        0.0
+      ],
+      "normalized": false,
+      "type": "SCALAR"
+    }
+  ],
+  "asset": {
+    "generator": "Huawei RSDZ Library, version: 20210318-B049",
+    "version": "2.0"
+  },
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 3599856,
+      "byteOffset": 0,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 3599856,
+      "byteOffset": 3599856,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 2399904,
+      "byteOffset": 7199712,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 1199952,
+      "byteOffset": 9599616,
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteLength": 4748172,
+      "byteOffset": 10799568,
+      "name": "ImageBufferView"
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 15547740,
+      "uri": "out.bin"
+    }
+  ],
+  "images": [
+    {
+      "bufferView": 4,
+      "mimeType": "image/jpeg"
+    }
+  ],
+  "materials": [
+    {
+      "name": "material",
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 0
+        },
+        "metallicFactor": 0.0
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "name": "defaultobject",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 1,
+            "POSITION": 0,
+            "TEXCOORD_0": 2
+          },
+          "indices": 3,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "children": [
+        1
+      ],
+      "name": "mesh_texture.obj"
+    },
+    {
+      "mesh": 0,
+      "name": "defaultobject"
+    }
+  ],
+  "samplers": [
+    {
+      "magFilter": 9729,
+      "minFilter": 9986,
+      "wrapR": 10497,
+      "wrapS": 10497,
+      "wrapT": 10497
+    }
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "nodes": [
+        0
+      ]
+    }
+  ],
+  "textures": [
+    {
+      "sampler": 0,
+      "source": 0
+    }
+  ]
+}
