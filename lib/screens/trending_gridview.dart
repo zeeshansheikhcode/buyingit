@@ -70,15 +70,15 @@ class _TrendingProductsState extends State<TrendingProducts> {
                   itemlist[index].price,
                   itemlist[index].title
                   );      
-             Scaffold.of(context).hideCurrentSnackBar();
-             Scaffold.of(context).showSnackBar(
-               const  SnackBar(content:  Text('Added Item to Cart'),
-                 duration:  Duration(seconds: 2),
-                //  action: SnackBarAction(label: 'UNDO', 
-                //  onPressed: (){
-                //     }),
-                 )
-             );
+            //  Scaffold.of(context).hideCurrentSnackBar();
+            //  Scaffold.of(context).showSnackBar(
+            //    const  SnackBar(content:  Text('Added Item to Cart'),
+            //      duration:  Duration(seconds: 2),
+            //     //  action: SnackBarAction(label: 'UNDO', 
+            //     //  onPressed: (){
+            //     //     }),
+            //      )
+            //  );
            },
            color: Theme.of(context).accentColor,
            icon:const Icon(Icons.shopping_cart,size: 20,)),

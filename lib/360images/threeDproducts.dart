@@ -89,15 +89,15 @@ class _ThreeDGridState extends State<ThreeDGrid> {
                        _selecteditems[index].id, 
                        _selecteditems[index].price,
                        _selecteditems[index].title);      
-                                 Scaffold.of(context).hideCurrentSnackBar();
-                                 Scaffold.of(context).showSnackBar(
-                       SnackBar(content: const Text('Added Item to Cart'),
-                       duration: const Duration(seconds: 2),
-                       action: SnackBarAction(label: 'UNDO', 
-                       onPressed: (){
-                          }),
-                       )
-                                 );
+                      //            Scaffold.of(context).hideCurrentSnackBar();
+                      //            Scaffold.of(context).showSnackBar(
+                      //  SnackBar(content: const Text('Added Item to Cart'),
+                      //  duration: const Duration(seconds: 2),
+                      //  action: SnackBarAction(label: 'UNDO', 
+                      //  onPressed: (){
+                      //     }),
+                      //  )
+                      //            );
                             },
                             color: Theme.of(context).accentColor,
                             icon:const Icon(Icons.shopping_cart,size: 20,)),

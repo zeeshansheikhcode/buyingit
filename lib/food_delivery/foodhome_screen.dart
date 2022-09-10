@@ -10,6 +10,7 @@ import 'package:provider/provider.dart';
 import '../model_provider/cart.dart';
 import '../model_provider/products.dart';
 import '../model_provider/products_model.dart';
+import '../screens/trending_detailscreen.dart';
 import '../widget/drawer_screen.dart';
 import '../widget/widget_appbar.dart';
 import 'burger.dart';
@@ -33,6 +34,8 @@ class _FoodHomeScreenState extends State<FoodHomeScreen> {
         if(
               _allitems[i].category == 'Pizza'  || _allitems[i].category == 'Sandwich'
            || _allitems[i].category == 'Burger' || _allitems[i].category == 'Shawarma'
+           || _allitems[i].category == 'Trending Pizza'  || _allitems[i].category == 'Trending Sandwich'
+           || _allitems[i].category == 'Trending Burger' || _allitems[i].category == 'Trending Shawarma'
           )
         {
           _selecteditems.add(_allitems[i]);
@@ -217,10 +220,27 @@ class _FoodHomeScreenState extends State<FoodHomeScreen> {
                    child: GridTile(
                    child:  GestureDetector(     
                    onTap: (){
-                   Navigator.of(context).
-                   pushNamed(
-                   DetailScreen.routeName ,
-                   arguments: _selecteditems[index].id );
+                   if(
+                    _selecteditems[index].category == 'Trending Pizza' 
+                 || _selecteditems[index].category == 'Trending Sandwich'
+                 || _selecteditems[index].category == 'Trending Burger'
+                 || _selecteditems[index].category == 'Trending Shawarma'
+                     )
+                        {
+                            print('oo');
+                            Navigator.of(context).
+                            pushNamed(
+                            TrendingDetailScreen.routeName ,
+                            arguments: _selecteditems[index].id);
+                        }
+                        else
+                        {   
+                            print('11');
+                            Navigator.of(context).
+                            pushNamed(
+                            DetailScreen.routeName ,
+                            arguments: _selecteditems[index].id );
+                        }
                   },
                  child: Hero(
                  tag: _selecteditems[index].id,
@@ -244,13 +264,13 @@ class _FoodHomeScreenState extends State<FoodHomeScreen> {
                     _selecteditems[index].id, 
                    _selecteditems[index].price,
                    _selecteditems[index].title);      
-               Scaffold.of(context).hideCurrentSnackBar();
-               Scaffold.of(context).showSnackBar(
-                const   SnackBar(content: Text('Added Item to Cart'),
-                   duration:  Duration(seconds: 2),
+              //  Scaffold.of(context).hideCurrentSnackBar();
+              //  Scaffold.of(context).showSnackBar(
+              //   const   SnackBar(content: Text('Added Item to Cart'),
+              //      duration:  Duration(seconds: 2),
         
-                   )
-               );
+              //      )
+              //  );
                         },
                         color: Theme.of(context).accentColor,
                         icon:const Icon(Icons.shopping_cart,size: 20,)),

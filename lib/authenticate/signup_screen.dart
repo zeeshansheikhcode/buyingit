@@ -136,8 +136,8 @@ class _SignUpScreenState extends State<SignUpScreen> {
                                     backgroundImage:
                                       _pickedImage != null ? FileImage(_pickedImage!) : null,
                                       ),
-                                  FlatButton.icon(
-                                  textColor: Theme.of(context).primaryColor,
+                                  ElevatedButton.icon(
+                                  //textColor: Theme.of(context).primaryColor,
                                   onPressed: _pickUserImage,
                                   icon:const Icon(Icons.image,color: Colors.black,),
                                   label: const Text('Add Image' ,style: TextStyle(color: Colors.black),

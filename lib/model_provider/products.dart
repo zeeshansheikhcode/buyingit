@@ -32,7 +32,7 @@ class Products with ChangeNotifier
       description: 'A red shirt - it is pretty red!',
       quantity: 2,
       price: 300.0,
-      category: 'Fashion',
+      category: 'Trending Fashion',
       CreatorID: '5zQzOvStuEePGbX4Tvk6NMB1RDp1',
       seller: 'zeeshan@gmail.com',
       productImage:'https://cdn.pixabay.com/photo/2016/10/02/22/17/red-t-shirt-1710578_1280.jpg',
@@ -43,7 +43,7 @@ class Products with ChangeNotifier
       description: 'A nice pair of trousers.',
       price: 400.0,
       quantity: 2,
-      category: 'Fashion',
+      category: 'Trending Fashion',
       CreatorID: '5zQzOvStuEePGbX4Tvk6NMB1RDp1',
       seller: 'zeeshan@gmail.com',
       productImage:
@@ -55,7 +55,7 @@ class Products with ChangeNotifier
       description: 'Warm and cozy - exactly what you need for the winter.',
       price: 100.0,
       quantity: 2,
-      category: 'Fashion',
+      category: 'Trending Fashion',
       CreatorID: '5zQzOvStuEePGbX4Tvk6NMB1RDp1',
       seller: 'zeeshan@gmail.com',
       productImage:
@@ -80,7 +80,7 @@ class Products with ChangeNotifier
       price: 500.0,
       quantity: 2,
       seller: 'ahsan@gmail.com',
-      category: 'Pizza',
+      category: 'Trending Pizza',
       CreatorID: 'cc8QVp6ukuOhouEzBr2gJABKm843',
       productImage:
           'https://cdn.pixabay.com/photo/2017/12/09/08/18/pizza-3007395__480.jpg',
@@ -92,7 +92,7 @@ class Products with ChangeNotifier
       price: 400.0,
       quantity: 2,
       seller: 'ahsan@gmail.com',
-      category: 'Pizza',
+      category: 'Trending Pizza',
       CreatorID: 'cc8QVp6ukuOhouEzBr2gJABKm843',
       productImage:
           'https://cdn.pixabay.com/photo/2017/02/15/10/57/pizza-2068272__340.jpg',
@@ -104,7 +104,7 @@ class Products with ChangeNotifier
       price: 400.0,
       quantity: 2,
       seller: 'ahsan@gmail.com',
-      category: 'Pizza',
+      category: 'Trending Pizza',
       CreatorID: 'cc8QVp6ukuOhouEzBr2gJABKm843',
       productImage:
           'https://cdn.pixabay.com/photo/2017/12/10/14/47/pizza-3010062__340.jpg',
@@ -116,7 +116,7 @@ class Products with ChangeNotifier
       price: 500.0,
       quantity: 2,
       seller: 'ahsan@gmail.com',
-      category: 'Pizza',
+      category: 'Trending Pizza',
       CreatorID: 'cc8QVp6ukuOhouEzBr2gJABKm843',
       productImage:
           'https://c8.alamy.com/zooms/9/17de0e561eea4835ac19a16a00e32fd4/2b1gcgf.jpg',
@@ -128,7 +128,7 @@ class Products with ChangeNotifier
       price: 600.0,
       quantity: 2,
       seller: 'ahsan@gmail.com',
-      category: 'Burger',
+      category: 'Trending Burger',
       CreatorID: 'cc8QVp6ukuOhouEzBr2gJABKm843',
       productImage:
           'https://www.foodiesfeed.com/wp-content/uploads/2019/07/confited-duck-burger.jpg',
@@ -140,7 +140,7 @@ class Products with ChangeNotifier
       price: 600.0,
       quantity: 2,
       seller: 'ahsan@gmail.com',
-      category: 'Burger',
+      category: 'Trending Burger',
       CreatorID: 'cc8QVp6ukuOhouEzBr2gJABKm843',
       productImage:
           'https://www.freepnglogos.com/uploads/burger-png/burger-png-transparent-images-download-clip-art-30.png',
@@ -152,7 +152,7 @@ class Products with ChangeNotifier
       price: 500.0,
       quantity: 2,
       seller: 'ahsan@gmail.com',
-      category: 'Burger',
+      category: 'Trending Burger',
       CreatorID: 'cc8QVp6ukuOhouEzBr2gJABKm843',
       productImage:
           'https://i.pinimg.com/736x/01/01/45/010145f0e8567d435097c7b72846afb1--travel-to-cuba-lamb-burgers.jpg',
@@ -164,7 +164,7 @@ class Products with ChangeNotifier
       price: 120.0,
       quantity: 2,
       seller: 'ahsan@gmail.com',
-      category: 'Shawarma',
+      category: 'Trending Shawarma',
       CreatorID: 'cc8QVp6ukuOhouEzBr2gJABKm843',
       productImage:
           'https://t3.ftcdn.net/jpg/02/55/42/50/360_F_255425068_CyDrGsVcu1Bl2SdJ2yXx35Rlp8jyNCCQ.jpg',
@@ -176,7 +176,7 @@ class Products with ChangeNotifier
       price: 120.0,
       quantity: 2,
       seller: 'ahsan@gmail.com',
-      category: 'Shawarma',
+      category: 'Trending Shawarma',
       CreatorID: 'cc8QVp6ukuOhouEzBr2gJABKm843',
       productImage:
           'https://cdn.pixabay.com/photo/2021/03/20/14/31/shawarma-6109976__340.jpg',
@@ -188,7 +188,7 @@ class Products with ChangeNotifier
       price: 120.0,
       quantity: 2,
       seller: 'ahsan@gmail.com',
-      category: 'Shawarma',
+      category: 'Trending Shawarma',
       CreatorID: 'cc8QVp6ukuOhouEzBr2gJABKm843',
       productImage:
           'https://thumbs.dreamstime.com/b/doner-kebab-shawarma-wrap-grilled-chicken-lavash-pita-bread-fresh-vegetables-tomatoes-green-salad-peppers-old-wooden-140579941.jpg',
@@ -200,7 +200,7 @@ class Products with ChangeNotifier
       price: 120.0,
       quantity: 2,
       seller: 'ahsan@gmail.com',
-      category: 'Sandwich',
+      category: 'Trending Sandwich',
       CreatorID: 'cc8QVp6ukuOhouEzBr2gJABKm843',
       productImage:
           'https://imagesvc.meredithcorp.io/v3/mm/image?q=60&c=sc&poi=face&w=960&h=480&url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F44%2F2019%2F08%2F26230801%2F4549578.jpg',
@@ -212,7 +212,7 @@ class Products with ChangeNotifier
       price: 120.0,
       quantity: 2,
       seller: 'ahsan@gmail.com',
-      category: 'Sandwich',
+      category: 'Trending Sandwich',
       CreatorID: 'cc8QVp6ukuOhouEzBr2gJABKm843',
       productImage:
           'https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F19%2F2018%2F06%2F15%2Fmr-grilled-peanut-butter-jelly-sandwich-2000.jpg',
@@ -224,7 +224,7 @@ class Products with ChangeNotifier
       price: 800.0,
       quantity: 2,
       seller: 'ahsan@gmail.com',
-      category: 'Fashion',
+      category: 'Trending Fashion',
       CreatorID: 'cc8QVp6ukuOhouEzBr2gJABKm843',
       productImage:
           'https://i.pinimg.com/474x/63/b4/a3/63b4a30516172bf9c3c5b43acb9c9d63.jpg',
@@ -236,7 +236,7 @@ class Products with ChangeNotifier
       price: 1000.0,
       quantity: 2,
      seller: 'ahmed@gmail.com',
-      category: 'Fashion',
+      category: 'Trending Fashion',
       CreatorID: 'KC1SimMVIEN26L7TLGmeRka9sCH3',
       productImage:
           'https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F20%2F2021%2F10%2F25%2Fgrace-karin-women-retro-long-sleeve-ruched-wrap-party-pencil-dress-brown.jpg',
@@ -248,7 +248,7 @@ class Products with ChangeNotifier
       price: 1000000,
       quantity: 2,
       seller: 'ahmed@gmail.com',
-      category: 'Real Estate',
+      category: 'Trending Real Estate',
       CreatorID: 'KC1SimMVIEN26L7TLGmeRka9sCH3',
       productImage:
           'https://cdn.pixabay.com/photo/2016/11/18/17/46/house-1836070__480.jpg',
@@ -260,7 +260,7 @@ class Products with ChangeNotifier
       price: 2000000,
       quantity: 2,
       seller: 'ahmed@gmail.com',
-      category: 'Real Estate',
+      category: 'Trending Real Estate',
       CreatorID: 'KC1SimMVIEN26L7TLGmeRka9sCH3',
       productImage:
           'https://st.depositphotos.com/1194063/2151/i/600/depositphotos_21515189-stock-photo-agent-with-house-model-and.jpg',
@@ -272,7 +272,7 @@ class Products with ChangeNotifier
       price: 400000,
       quantity: 2,
       seller: 'ahmed@gmail.com',
-      category: 'Real Estate',
+      category: 'Trending Real Estate',
       CreatorID: 'KC1SimMVIEN26L7TLGmeRka9sCH3',
       productImage:
           'https://cdn.corporatefinanceinstitute.com/assets/real-estate.jpeg',
@@ -284,7 +284,7 @@ class Products with ChangeNotifier
       price: 450,
       quantity: 2,
       seller: 'ahmed@gmail.com',
-      category: 'Home Appliance',
+      category: 'Trending Home Appliance',
       CreatorID: 'KC1SimMVIEN26L7TLGmeRka9sCH3',
       productImage:
           'https://i.pinimg.com/736x/58/ef/b2/58efb234576d5adbbcb9b99ebcfc7d26.jpg',
@@ -296,7 +296,7 @@ class Products with ChangeNotifier
       price: 20000,
       quantity: 2,
       seller: 'ahmed@gmail.com',
-      category: 'Home Appliance',
+      category: 'Trending Home Appliance',
       CreatorID: 'KC1SimMVIEN26L7TLGmeRka9sCH3',
       productImage:
           'https://www.arabnews.pk/sites/default/files/styles/n_670_395/public/2020/09/11/2265811-996621850.jpg?itok=cPsnW4VM',
@@ -308,7 +308,7 @@ class Products with ChangeNotifier
       price: 130.0,
       quantity: 2,
       seller: 'ahmed@gmail.com',
-      category: 'Hardware',
+      category: 'Trending Hardware',
       CreatorID: 'KC1SimMVIEN26L7TLGmeRka9sCH3',
       productImage:
           'https://5.imimg.com/data5/LK/AM/EA/SELLER-25167820/electric-plass-500x500.jpg',
@@ -320,7 +320,7 @@ class Products with ChangeNotifier
       price: 2000.0,
       quantity: 2,
       seller: 'ahmed@gmail.com',
-      category: 'Hardware',
+      category: 'Trending Hardware',
       CreatorID: 'KC1SimMVIEN26L7TLGmeRka9sCH3',
       productImage:
           'https://image.shutterstock.com/image-photo/inverter-welding-machine-equipment-isolated-260nw-450564319.jpg',

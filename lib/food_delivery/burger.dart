@@ -7,6 +7,7 @@ import '../model_provider/cart.dart';
 import '../model_provider/products.dart';
 import '../model_provider/products_model.dart';
 import '../screens/detail_screen.dart';
+import '../screens/trending_detailscreen.dart';
 import '../widget/widget_appbar.dart';
 class BurgerScreen extends StatefulWidget {
   const BurgerScreen({ Key? key }) : super(key: key);
@@ -24,7 +25,7 @@ class _BurgerScreenState extends State<BurgerScreen> {
      List<Product> _selecteditems =[];
     for(int i=0;i<_allitems.length;i++)
     {
-        if(_allitems[i].category == 'Burger')
+        if(_allitems[i].category == 'Burger' || _allitems[i].category == 'Trending Burger')
         {
           _selecteditems.add(_allitems[i]);
         }
@@ -54,10 +55,20 @@ class _BurgerScreenState extends State<BurgerScreen> {
                      child: GridTile(
                    child:  GestureDetector(     
                    onTap: (){
-                   Navigator.of(context).
-                   pushNamed(
-                   DetailScreen.routeName ,
-                   arguments: _selecteditems[index].id );
+                  if(_selecteditems[index].category == 'Trending Burger')
+                        {
+                            Navigator.of(context).
+                            pushNamed(
+                            TrendingDetailScreen.routeName ,
+                            arguments: _selecteditems[index].id);
+                        }
+                        else
+                        {
+                            Navigator.of(context).
+                            pushNamed(
+                            DetailScreen.routeName ,
+                            arguments: _selecteditems[index].id );
+                        }
                   },
                  child: Hero(
                  tag: _selecteditems[index].id,
@@ -81,15 +92,15 @@ class _BurgerScreenState extends State<BurgerScreen> {
                     _selecteditems[index].id, 
                    _selecteditems[index].price,
                    _selecteditems[index].title);      
-               Scaffold.of(context).hideCurrentSnackBar();
-               Scaffold.of(context).showSnackBar(
-                   SnackBar(content: const Text('Added Item to Cart'),
-                   duration: const Duration(seconds: 2),
-                   action: SnackBarAction(label: 'UNDO', 
-                   onPressed: (){
-                      }),
-                   )
-               );
+              //  Scaffold.of(context).hideCurrentSnackBar();
+              //  Scaffold.of(context).showSnackBar(
+              //      SnackBar(content: const Text('Added Item to Cart'),
+              //      duration: const Duration(seconds: 2),
+              //      action: SnackBarAction(label: 'UNDO', 
+              //      onPressed: (){
+              //         }),
+              //      )
+              //  );
                         },
                         color: Theme.of(context).accentColor,
                         icon:const Icon(Icons.shopping_cart,size: 20,)),

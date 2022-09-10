@@ -150,13 +150,13 @@ class _AugmentedListState extends State<AugmentedList> {
                   actualProducts[index].price,
                   actualProducts[index].title
                  );      
-             Scaffold.of(context).hideCurrentSnackBar();
-             Scaffold.of(context).showSnackBar(
-              const  SnackBar(content:  Text('Added Item to Cart'),
-                 duration:  Duration(seconds: 2),
+            //  Scaffold.of(context).hideCurrentSnackBar();
+            //  Scaffold.of(context).showSnackBar(
+            //   const  SnackBar(content:  Text('Added Item to Cart'),
+            //      duration:  Duration(seconds: 2),
                 
-                 )
-             );
+            //      )
+            //  );
            },
            color: Theme.of(context).accentColor,
            icon:const Icon(Icons.shopping_cart,size: 20,)),

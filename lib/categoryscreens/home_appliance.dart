@@ -1,6 +1,7 @@
 /**
  * This File contains all home Appliance Products
  */
+import 'package:buying_final/screens/trending_detailscreen.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../model_provider/cart.dart';
@@ -20,11 +21,15 @@ class _HomeApplianceState extends State<HomeAppliance> {
   Widget build(BuildContext context) {
     final products = Provider.of<Products>(context,listen: false);
     final cart = Provider.of<Cart>(context,listen: false);
-       List<Product> _allitems = products.items + products.trendingItems;
-     List<Product> _selecteditems =[];
+    List<Product> _allitems = products.items + products.trendingItems;
+   // print(products.trendingItems);
+    List<Product> _selecteditems =[];
     for(int i=0;i<_allitems.length;i++)
     {
-        if(_allitems[i].category == 'Home Appliance' ||_allitems[i].category == 'Home Applaince')
+        if(  _allitems[i].category == 'Home Appliance' 
+           ||_allitems[i].category == 'Home Applaince'
+           ||_allitems[i].category == 'Trending Home Appliance'
+           )
         {
           _selecteditems.add(_allitems[i]);
         }
@@ -59,10 +64,20 @@ class _HomeApplianceState extends State<HomeAppliance> {
                          child: GridTile(
                        child:  GestureDetector(     
                        onTap: (){
-                       Navigator.of(context).
-                       pushNamed(
-                       DetailScreen.routeName ,
-                       arguments: _selecteditems[index].id );
+                        if(_selecteditems[index].category == 'Trending Home Appliance')
+                        {
+                            Navigator.of(context).
+                            pushNamed(
+                            TrendingDetailScreen.routeName ,
+                            arguments: _selecteditems[index].id);
+                        }
+                        else
+                        {
+                            Navigator.of(context).
+                            pushNamed(
+                            DetailScreen.routeName ,
+                            arguments: _selecteditems[index].id );
+                        }
                       },
                      child: Hero(
                      tag: _selecteditems[index].id,
@@ -86,15 +101,15 @@ class _HomeApplianceState extends State<HomeAppliance> {
                         _selecteditems[index].id, 
                        _selecteditems[index].price,
                        _selecteditems[index].title);      
-                                 Scaffold.of(context).hideCurrentSnackBar();
-                                 Scaffold.of(context).showSnackBar(
-                       SnackBar(content: const Text('Added Item to Cart'),
-                       duration: const Duration(seconds: 2),
-                       action: SnackBarAction(label: 'UNDO', 
-                       onPressed: (){
-                          }),
-                       )
-                                 );
+                      //            Scaffold.of(context).hideCurrentSnackBar();
+                      //            Scaffold.of(context).showSnackBar(
+                      //  SnackBar(content: const Text('Added Item to Cart'),
+                      //  duration: const Duration(seconds: 2),
+                      //  action: SnackBarAction(label: 'UNDO', 
+                      //  onPressed: (){
+                      //     }),
+                      //  )
+                      //            );
                             },
                             color: Theme.of(context).accentColor,
                             icon:const Icon(Icons.shopping_cart,size: 20,)),
