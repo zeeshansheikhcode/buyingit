@@ -7,6 +7,7 @@ import 'package:buying_final/food_delivery/shawarma.dart';
 import 'package:buying_final/screens/detail_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:toast/toast.dart';
 import '../model_provider/cart.dart';
 import '../model_provider/products.dart';
 import '../model_provider/products_model.dart';
@@ -25,6 +26,7 @@ class _FoodHomeScreenState extends State<FoodHomeScreen> {
   
   @override
   Widget build(BuildContext context) {
+    ToastContext().init(context);
      final products = Provider.of<Products>(context,listen:false);
      final cart = Provider.of<Cart>(context,listen: false);
      List<Product> _allitems = products.items + products.trendingItems;
@@ -263,7 +265,10 @@ class _FoodHomeScreenState extends State<FoodHomeScreen> {
                cart.addItem(
                     _selecteditems[index].id, 
                    _selecteditems[index].price,
-                   _selecteditems[index].title);      
+                   _selecteditems[index].title);   
+                   
+                     
+                   Toast.show('Item Added', duration: 2, gravity:Toast.bottom);     
               //  Scaffold.of(context).hideCurrentSnackBar();
               //  Scaffold.of(context).showSnackBar(
               //   const   SnackBar(content: Text('Added Item to Cart'),

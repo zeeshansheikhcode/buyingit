@@ -9,6 +9,8 @@ import '../model_provider/products_model.dart';
 import '../screens/detail_screen.dart';
 import '../screens/trending_detailscreen.dart';
 import '../widget/widget_appbar.dart';
+
+import 'package:toast/toast.dart';
 class BurgerScreen extends StatefulWidget {
   const BurgerScreen({ Key? key }) : super(key: key);
   @override
@@ -19,6 +21,7 @@ class _BurgerScreenState extends State<BurgerScreen> {
  
   @override
   Widget build(BuildContext context) {
+    ToastContext().init(context); 
     final products = Provider.of<Products>(context,listen:false);
     final cart = Provider.of<Cart>(context,listen: false);
     List<Product> _allitems = products.items + products.trendingItems;
@@ -91,7 +94,10 @@ class _BurgerScreenState extends State<BurgerScreen> {
                cart.addItem(
                     _selecteditems[index].id, 
                    _selecteditems[index].price,
-                   _selecteditems[index].title);      
+                   _selecteditems[index].title);  
+                     
+                   Toast.show('Item Added', duration: 2, gravity:Toast.bottom);  
+           
               //  Scaffold.of(context).hideCurrentSnackBar();
               //  Scaffold.of(context).showSnackBar(
               //      SnackBar(content: const Text('Added Item to Cart'),

@@ -7,6 +7,7 @@ import 'dart:async';
 import 'package:flutter/services.dart';
 import 'package:ar_flutter_plugin/ar_flutter_plugin.dart';
 import 'package:provider/provider.dart';
+import 'package:toast/toast.dart';
 import '../model_provider/cart.dart';
 import '../model_provider/products_model.dart';
 class AugmentedList extends StatefulWidget {
@@ -74,6 +75,7 @@ class _AugmentedListState extends State<AugmentedList> {
   ];
   @override
   Widget build(BuildContext context) {
+    ToastContext().init(context); 
   final cart = Provider.of<Cart>(context,listen: false);
     return MaterialApp(
       debugShowCheckedModeBanner: false,
@@ -149,7 +151,9 @@ class _AugmentedListState extends State<AugmentedList> {
                   actualProducts[index].id, 
                   actualProducts[index].price,
                   actualProducts[index].title
-                 );      
+                 );     
+                 
+                    Toast.show('Item Added', duration: 2, gravity:Toast.bottom);   
             //  Scaffold.of(context).hideCurrentSnackBar();
             //  Scaffold.of(context).showSnackBar(
             //   const  SnackBar(content:  Text('Added Item to Cart'),

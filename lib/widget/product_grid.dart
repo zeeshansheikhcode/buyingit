@@ -7,6 +7,8 @@ import '../model_provider/cart.dart';
 import '../model_provider/products.dart';
 import '../model_provider/products_model.dart';
 import '../screens/detail_screen.dart';
+
+import 'package:toast/toast.dart';
 class ProductsGrid extends StatefulWidget {
    const ProductsGrid({
     Key? key,
@@ -28,6 +30,7 @@ class _ProductsGridState extends State<ProductsGrid> {
   }
   @override
   Widget build(BuildContext context) {
+    ToastContext().init(context);
     final productdata = Provider.of<Products>(context,listen: false); // Creating Provider Object Of Product
     final products = productdata.items;                               // Getting Product List
     final cart = Provider.of<Cart>(context,listen: false);            // Creating Provider Object Of Cart
@@ -121,6 +124,7 @@ class _ProductsGridState extends State<ProductsGrid> {
                   actualProducts[index].price,
                   actualProducts[index].title
                   );      
+                   Toast.show('Item Added', duration: 2, gravity:Toast.bottom);  
             //  Scaffold.of(context).hideCurrentSnackBar();
             //  Scaffold.of(context).showSnackBar(
             //   const  SnackBar(content:  Text('Added Item to Cart'),

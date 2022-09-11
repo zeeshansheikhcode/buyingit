@@ -7,6 +7,7 @@ import 'package:provider/provider.dart';
 import '../model_provider/products.dart';
 import '../model_provider/products_model.dart';
 import 'trending_detailscreen.dart';
+import 'package:toast/toast.dart';
 class TrendingProducts extends StatefulWidget {
   const TrendingProducts({ Key? key }) : super(key: key);
 
@@ -19,6 +20,7 @@ class _TrendingProductsState extends State<TrendingProducts> {
    List<Product> itemlist =[];
   @override
   Widget build(BuildContext context) {
+     ToastContext().init(context);
     final prod = Provider.of<Products>(context);
     final cart = Provider.of<Cart>(context);
      itemlist = prod.trendingItems;
@@ -69,7 +71,9 @@ class _TrendingProductsState extends State<TrendingProducts> {
                   itemlist[index].id, 
                   itemlist[index].price,
                   itemlist[index].title
-                  );      
+                  );    
+                   Toast.show('Item Added', duration: 2, gravity:Toast.bottom);  
+       
             //  Scaffold.of(context).hideCurrentSnackBar();
             //  Scaffold.of(context).showSnackBar(
             //    const  SnackBar(content:  Text('Added Item to Cart'),

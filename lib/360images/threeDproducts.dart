@@ -4,6 +4,7 @@
 import 'package:buying_final/360images/threed_image.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:toast/toast.dart';
 import '../model_provider/cart.dart';
 import '../model_provider/products.dart';
 import '../model_provider/products_model.dart';
@@ -18,6 +19,7 @@ class ThreeDGrid extends StatefulWidget {
 class _ThreeDGridState extends State<ThreeDGrid> {
    @override
   Widget build(BuildContext context) {
+    ToastContext().init(context); 
     final products = Provider.of<Products>(context,listen: false);
     final cart = Provider.of<Cart>(context,listen: false);
     List<Product> _selecteditems =[];
@@ -88,7 +90,9 @@ class _ThreeDGridState extends State<ThreeDGrid> {
                                  cart.addItem(
                        _selecteditems[index].id, 
                        _selecteditems[index].price,
-                       _selecteditems[index].title);      
+                       _selecteditems[index].title);    
+                       
+                    Toast.show('Item Added', duration: 2, gravity:Toast.bottom);   
                       //            Scaffold.of(context).hideCurrentSnackBar();
                       //            Scaffold.of(context).showSnackBar(
                       //  SnackBar(content: const Text('Added Item to Cart'),
